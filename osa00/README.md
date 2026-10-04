@@ -1,5 +1,6 @@
 # 0.4: Uusi muistiinpano
 
+```mermaid
 sequenceDiagram
 	participant browser
 	participant server
@@ -42,11 +43,11 @@ sequenceDiagram
 	
 	note right of browser: xhttp.onreadystatechange gets executed, composes unordered list
 	deactivate browser
-	
-	
-	
+```
+
 # 0.5: Single Page App
 
+```mermaid
 sequenceDiagram
 	participant browser
 	participant server
@@ -77,9 +78,11 @@ sequenceDiagram
 	server->>browser: JSON formatted notes list
 	note right of browser: xhttp.onreadystatechange gets executed: parses and draws notes
 	deactivate browser
-	
+```
+
 # 0.6: Uusi muistiinpano
 
+```mermaid
 sequenceDiagram
 	participant browser
 	participant server
@@ -98,4 +101,4 @@ sequenceDiagram
 	server->>browser: "message": "note created"
 	deactivate server
 	deactivate browser
-	
+```
