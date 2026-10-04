@@ -9,8 +9,8 @@ sequenceDiagram
 	note right of browser: user clicks "save"
 	
 	browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-	note right of browser: POST field "note" has note text
 	activate server
+	note right of browser: POST field "note" has note text
 	server->>database: insert into notes
 	server->>browser: 302 redirect /exampleapp/notes
 	deactivate server
@@ -76,6 +76,7 @@ sequenceDiagram
 	server->>database: select * from notes
 	database->>server: raw notes list
 	server->>browser: JSON formatted notes list
+	deactivate server
 	note right of browser: xhttp.onreadystatechange gets executed: parses and draws notes
 	deactivate browser
 ```
